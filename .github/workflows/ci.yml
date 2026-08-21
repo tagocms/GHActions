@@ -28,4 +28,4 @@ jobs:
                 xcodebuild -project GHActions.xcodeproj -scheme GHActions -showdestinations
 
             - name: Run unit tests
-              run: set -o pipefail && xcodebuild -project GHActions.xcodeproj -scheme GHActions -destination 'platform=iOS Simulator, name=iPhone 17, OS=latest,arch=arm64' clean test | xcbeautify
+              run: set -o pipefail && xcodebuild -project GHActions.xcodeproj -scheme GHActions -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest,arch=arm64' clean test | xcbeautify
