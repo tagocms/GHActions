@@ -27,5 +27,14 @@ jobs:
                 xcodebuild -version
                 xcodebuild -project GHActions.xcodeproj -scheme GHActions -showdestinations
 
+            - shell: bash
+              name: Create Config.xcconfig
+              env:
+                API_TOKEN: ${{ secrets.API_TOKEN }}
+                SECOND_TOKEN: ${{ secrets.SECOND_TOKEN }}
+              run: |
+                echo "API_TOKEN = $API_TOKEN" > Config.xcconfig
+                echo "SECOND_TOKEN = $SECOND_TOKEN" >> Config.xcconfig
+
             - name: Run unit tests
               run: set -o pipefail && xcodebuild -project GHActions.xcodeproj -scheme GHActions -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest,arch=arm64' clean test | xcbeautify
