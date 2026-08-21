@@ -1,4 +1,4 @@
-name: Text iOS Project
+name: Test iOS Project
 on:
     pull_request:
         branches:
@@ -28,4 +28,4 @@ jobs:
                 xcodebuild -project GHActions.xcodeproj -scheme GHActions -showdestinations
 
             - name: Run unit tests
-              run: xcodebuild -project GHActions.xcodeproj -scheme GHActions -destination 'platform=iOS Simulator, name=iPhone 17, OS=latest,arch=arm64' clean test | xcbeautify
+              run: set -o pipefail && xcodebuild -project GHActions.xcodeproj -scheme GHActions -destination 'platform=iOS Simulator, name=iPhone 17, OS=latest,arch=arm64' clean test | xcbeautify
