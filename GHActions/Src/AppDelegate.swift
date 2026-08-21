@@ -13,12 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     // MARK: ESPERE PARA DESCOMENTAR ATE O RAFINHA PEDIR :)
-//    let apiToken = Bundle.main.object(forInfoDictionaryKey: "ApiToken") as? String ?? ""
-//    let secondToken = Bundle.main.object(forInfoDictionaryKey: "SecondToken") as? String ?? ""
-//
-//    if apiToken == "" || secondToken == "" {
-//      fatalError("Token not found")
-//    }
+    let apiToken = Bundle.main.object(forInfoDictionaryKey: "ApiToken") as? String ?? ""
+    let secondToken = Bundle.main.object(forInfoDictionaryKey: "SecondToken") as? String ?? ""
+
+    if apiToken == "" || secondToken == "" {
+      fatalError("Token not found")
+    }
 
     return true
   }
