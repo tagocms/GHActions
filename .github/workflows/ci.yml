@@ -1,0 +1,20 @@
+name: Text iOS Project
+on:
+    pull_request:
+        branches:
+            - main
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    test_project:
+        name: Testing iOS Project
+        runs-on: macos-latest
+        steps:
+            - name: Checkout to main
+            uses: actions/checkout@v7
+            
+            - name: Hello world
+            run: echo "Hello world!"

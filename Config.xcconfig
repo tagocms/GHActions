@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  GHActions
+//
+//  Created by Rafael Venetikides on 19/08/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+API_TOKEN = 4a3216546f31be859aa9ea2de14022742651be20dbf9baaa9a4ba694d7165931
+SECOND_TOKEN = 6f7903b6273c7d7bee127db770c62b4a1f585b57864adbf9650dd903b5bc07ee
